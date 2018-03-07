@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Advay '16</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="author" content="Advay 16">
+	<meta name="description" content="Advay 16, The Techno-Cultural Extravaganza">
+	<meta name="keywords" content="advay,tist,toch,arakunnam">
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="assets/styles/css/styles.css"/>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+<!-- advay 2k15 BEGIN -->
+<link rel="stylesheet" href="assets/styles/css/styleadvay.css">
+<link rel="stylesheet" href="assets/styles/css/sponser.css">
+<link rel="stylesheet" href="assets/styles/css/component.css">
+<!-- advay 2k15 END -->
+<script src="assets/scripts/jquery.js"></script>
+<script>
+	var song=1;
+	$(document).ready(function(){
+
+});
+// pages BEGIN
+// about BEGIN
+	function open_about(){
+	
+	 $(".about_container").animate({top: '0px'},{queue: false,duration: 500});
+	 
+	   
+	}
+	function close_about(){
+	 $(".about_container").animate({top: '100%'},{queue: false,duration: 500});
+}
+// about END
+// contact BEGIN
+	function open_contact(){
+	
+	 $(".contact_container").animate({top: '0px'},{queue: false,duration: 500});
+	 
+	   
+	}
+	function close_contact(){
+	 $(".contact_container").animate({top: '100%'},{queue: false,duration: 500});
+}
+// contact END
+// sponsers BEGIN
+	function open_sponsers(){
+	
+	 $(".sponsers_container").animate({top: '0px'},{queue: false,duration: 500});
+	 
+	   
+	}
+	function close_sponsers(){
+	 $(".sponsers_container").animate({top: '100%'},{queue: false,duration: 500});
+}
+// sponsers END
+// events BEGIN
+	function open_events(){
+	
+	 $(".events_container").animate({top: '0px'},{queue: false,duration: 500});
+	 
+	   
+	}
+	function close_events(){
+	 $(".events_container").animate({top: '100%'},{queue: false,duration: 500});
+}
+// events END
+
+// pages END
+function songplaypause(){
+if(song==1){
+	$('#bgplay').trigger("pause");
+	$(".song").removeClass("pause");
+	$(".song").addClass("play");
+	song=0;
+}
+else{
+	$('#bgplay').trigger("play");
+	$(".song").removeClass("play");
+	$(".song").addClass("pause");
+	song=1;
+}	
+}
+
+	$(window).load(function() {
+$(".ghost").fadeOut();
+});
+</script>
+<style>
+body{
+	overflow: hidden;
+}
+#content {
+	font-family: Tahoma, Geneva, sans-serif;
+	float: left;
+	width: 100%;
+	margin-right: 24px;
+	padding: 0px 0px 0px 0px;
+}
+
+#content h2 {
+	padding: 0px 0px 20px 0px;
+	text-transform: uppercase;
+	font-size: 3em;
+	font-weight: 200;
+	color: #262626;
+}
+.ghost{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	left: 0%;
+	background-color: white;
+}
+.loadimg{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	width: 2.5%;
+}
+
+/*pages BEGIN*/
+
+		.about_container{
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform:translate(-50%,0%);
+		width: 100%;
+		height: 100%;
+		overflow-x:hidden;
+		overflow-y:scroll; 
+		color: black;
+		text-align: center;
+		background-color: white;
+		
+	}
+
+	.close{
+		position: relative;
+		width: 100%;
+		padding:60px 20px 60px 50px;
+		background-color: black;
+		color: white;
+		text-align: right;
+	}
+	.page_elements{
+		width:100%;
+		position:relative;
+		float: left;
+		text-align: left;
+
+		
+	}
+.content_advay{
+	width:70%;
+	text-align: left;
+	margin-left: 10%;
+}
+.contact_container{
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform:translate(-50%,0%);
+		width: 100%;
+		height: 100%;
+		overflow-x:hidden;
+		overflow-y:scroll; 
+		color: black;
+		text-align: center;
+		background-color: white;
+		
+	}
+	.sponsers_container{
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform:translate(-50%,0%);
+		width: 100%;
+		height: 100%;
+		overflow-x:hidden;
+		overflow-y:scroll; 
+		color: black;
+		text-align: center;
+		background-color: white;
+		
+	}
+		.events_container{
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform:translate(-50%,0%);
+		width: 100%;
+		height: 100%;
+		overflow-x:hidden;
+		overflow-y:hidden; 
+		color: black;
+		text-align: center;
+		background: rgba(0,0,0,.8);
+		
+	}
+/*pages END*/
+/**/
+#controls{
+  display: none;
+}
+/**/
+.loc_toc{
+	position: absolute;
+	top:1%;
+	left:1%;
+	z-index: 9;
+	color: #fff;
+	text-align: left;
+}
+.song{
+	position: absolute;
+	top: 5%;right: 5%;
+	width: 20px;height: 20px;
+	
+	z-index: 12;
+	cursor: pointer;
+}
+.pause{
+	background-image: url("images/pause.png");
+	background-size: 100% 100%;
+}
+.play{
+	background-image: url("images/play.png");
+	background-size: 100% 100%;
+}
+
+</style>
+<!--  -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/styles.css"/>
+<!--  -->
+
+</head>
+<body>
+	<div class="loc_toc">
+         <h2 style="padding-top:0; margin:0;">2016 FEB 23,24</h2>
+           TECHNO CULTURAL EXTRAVAGANZA<br/>
+            <strong>TOC H INSTITUTE OF SCIENCE AND TECHNOLOGY (TIST)<br/> 
+            </strong>
+        </div>
+<div class="song pause" onclick="songplaypause();"></div>
+<audio id="bgplay" autoplay loop>
+
+  <source src="bgplay.mp3" type="audio/mpeg">
+  
+</audio>
+<!--  -->
+    <div id="containerflat" class="containerflat">
+      <div id="output" class="containerflat">
+      </div>
+      <div id="vignette" class="overlay vignette">
+      </div>
+     
+     
+
+    
+    <div id="controls" class="controls">
+    </div>
+
+  
+   
+
+<!--  -->
+
+	<div id="container" class="wrapper">
+		<ul id="scene" class="scene unselectable"
+			data-friction-x="0.1"
+			data-friction-y="0.1"
+			data-scalar-x="25"
+			data-scalar-y="15">
+	
+
+			<li class="layer" data-depth="0.10"><div class="logos imgl c"></div></li>
+
+		</ul>
+		<section id="about" style="z-index:10;" class="wrapper about hide accelerate">
+			<div class="cell accelerate">
+				<div class="cables center accelerate">
+					<div class="panel accelerate">
+						<header>
+							<h1>Advay 2k16</h1>
+						</header>
+						<p><strong>Advay </strong>- the one and the only. It is the bonfire that’s lit the minds of thousands of students each and every year with the presence of living maestros, such as Stephen Devassy, Balabhaskar, Agam, Lagori and so forth. With 50+ events every year Advay’s been the stage to thousands, from more than 50 colleges all over India. Like the name says, Advay is One of its kind.</p>
+
+						<ul class="links">
+							<li><a class="about1" href="javascript:void(0);" onclick="open_about();">About</a></li>
+							<li><a class="event" href="javascript:void(0);" onclick="open_events();" >Events</a></li>
+						</ul>
+						<ul class="links">
+							<li><a class="sponser" href="javascript:void(0);" onclick="open_sponsers();">Sponsors</a></li>
+							<li><a class="contact" href="javascript:void(0);" onclick="open_contact();">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<button id="toggle" class="toggle explode" style="z-index:10;">
+
+			<div class="cross" >
+
+				<div class="x"></div>
+				<div class="y"></div>
+
+			</div>
+		</button>
+<!-- notification BEGIN -->
+		<div id="prompt" class="wrapper prompt hide accelerate" style="z-index:10;">
+			<div class="cell accelerate">
+				<div class="panel center unselectable accelerate">
+					<button id="dismiss" class="dismiss" onclick="hide_prompt();">
+						<div class="cross">
+							<div class="x"></div>
+							<div class="y"></div>
+						</div>
+					</button>
+
+					<h2>Advay 16 Lauch</h2>
+					<p>Official lauch of Advay 2k16 was held at Toch H institute of Science & Technology by Major Ravi(Filim Director)</p>
+					<p>On 29 Jan 2016</p>
+			</div>
+		</div>
+		<!-- notification END -->
+
+
+		
+	</div>				</div>
+	<div class="advay">
+  
+<svg viewBox="0 0 800 600">
+  <symbol id="s-text">
+    <text text-anchor="middle"
+          x="50%"
+          y="35%"
+          class="text--line"
+          >
+      Share the
+    </text>
+    <text text-anchor="middle"
+          x="50%"
+          y="68%"
+          class="text--line2"
+          >
+     Colours of life.
+    </text>
+    
+  </symbol>
+  
+  <g class="g-ants">
+    <use xlink:href="#s-text"
+      class="text-copy"></use>     
+    <use xlink:href="#s-text"
+      class="text-copy"></use>     
+    <use xlink:href="#s-text"
+      class="text-copy"></use>     
+    <use xlink:href="#s-text"
+      class="text-copy"></use>     
+    <use xlink:href="#s-text"
+      class="text-copy"></use>
+  </g>
+  
+</svg>
+</div>
+<!-- pages BEGIN -->
+
+<!-- about BEGIN -->
+<div class="about_container" style="z-index:13;">
+<div class="close page_elements" ><span class="x" onclick="close_about();" style='font-size:30px;cursor:pointer;'>x</span></div>
+	<img class='page_elements' src="images/img1.jpg">
+<div class="content_advay" >
+
+		<div id="content">
+				<h2><a href="#">Toc H Institute of Science and Technology</a></h2>
+				<div class="entry">
+				<p>Toc H Institute of Science and Technology (TIST) is not merely another Engineering College producing hordes of Engineering graduates every year. It is more than a center of learning and home to a diverse community of innovators and entrepreneurs. In every classroom and laboratory, you’ll find unique people who are passionate about learning, teaching and collaborating on groundbreaking technologies.</p>
+					<p>TIST prepares future leaders through an innovative engineering education that bridges Science and Technology, enterprise and society. We inspire our students to indulge in research, innovation and excellance, so that they can gain valuable hands-on learning opportunities from real-world experiences. We aspire to be home to innovative minds making  new discoveries, groundbreaking inventions, and top-flight graduates, all contributing to the strength of our economy and the health and vitality of our community.<br />
+					</p>
+			</div>
+
+</div>
+</div>
+	<img class='page_elements' src="images/img2.jpg">
+<div class="content_advay" >
+
+		<div id="content">
+				<h2><a href="#">Advay 2016</a></h2>
+				<div class="entry">
+				<p> ADVAY ‘16 
+      It began as a platform for the students to showcase their talent and knowledge in various fields of cultural significance in the year 2009. Since then ADVAY has come a long way to become one of the major festivals in Kochi. Students at TIST have always ventured beyond books and classrooms to inculcate ingenuity and innovation as part of college life. Every year, the otherwise cool and calm minds of Tistians bubble out their zest through the colors of ADVAY.
+Welcome to the 2016 version of this colorful extravaganza!! 50 colleges, over 50 events, over 20,000 footfalls! Be there to experience the rejuvenation felt like never before!!
+
+</p>
+					<p>With the choices of informal events, competitions and performances lined up at this year's Advay, where else would you be this February? Step into this wonderland on the 23rd & 24th of February 2016, and your life will never be the same again. 
+Our aim is simple. Explore and Exhibit talent whatever it is.<br />
+					</p>
+			</div>
+
+</div>
+	
+</div>
+
+</div>
+  <!-- about END -->
+
+<!-- contact BEGIN -->
+<div class="contact_container" style="z-index:13;">
+<div class="close page_elements" ><span class="x" onclick="close_contact();" style='font-size:30px;cursor:pointer;'>x</span></div>
+			<div id="content">
+				<h2><a href="#">Contact</a></h2>
+				<div class="entry">
+				
+					<p>We will be more than happy to help you. Contact our event co-ordinators for any queries. We will be more happy to hear from you. Also mail us at <strong>advay2k16@gmail.com. </strong>Contact information are given below.<br />
+					</p>
+			</div>
+
+</div>
+			<div class="main">
+				<ul class="cbp-ig-grid">
+							
+					<li>
+						<a href="#">
+							<span class="cbp-ig-icon ">	<img src="images/sarath.jpg"></span>
+							<h3 class="cbp-ig-title">Sharath K R</h3>
+							<span class="cbp-ig-category">College Caption<br>9567455415</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+								<span class="cbp-ig-icon ">	<img src="images/ashok.jpg"></span>
+							<h3 class="cbp-ig-title">Ashok</h3>
+							<span class="cbp-ig-category">Advay/Sponsership</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="cbp-ig-icon ">	<img src="images/vinayak.jpg"></span>
+							<h3 class="cbp-ig-title">Vinayak</h3>
+							<span class="cbp-ig-category">Technical Head</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="cbp-ig-icon ">	<img src="images/shafeeque.jpg"></span>
+							<h3 class="cbp-ig-title">Shafeeque</h3>
+							<span class="cbp-ig-category">web<br>9567745035</span>
+						</a>
+					</li>
+												
+				</ul>
+			</div>
+
+</div>
+  <!-- contact END -->
+  <!-- sponsers BEGIN -->
+<div class="sponsers_container" style="z-index:13;">
+<div class="close page_elements" ><span class="x" onclick="close_sponsers();" style='font-size:30px;cursor:pointer;'>x</span></div>
+			<div id="content">
+				<h2><a href="#">Our Sponsors</a></h2>	
+			<ul class="cbp-rfgrid">
+				<li><a href="#"><img src="images/cat.jpg" /><div><h3>Red FM</h3></div></a></li>
+				<li><a href="#"><img src="images/sbi.jpg" /><div><h3>State Bank of India</h3></div></a></li>
+				<li><a href="#"><img src="images/ustglobal.jpg" /><div><h3>UST Global</h3></div></a></li>
+				
+			</ul>
+
+</div>
+</div>
+  <!-- sponsers END -->
+    <!-- events BEGIN -->
+<div class="events_container" style="z-index:13;">
+<div class="close page_elements" ><span class="x" onclick="close_events();" style='font-size:30px;cursor:pointer;'>x</span></div>
+	
+<div class="advay_event" >
+				<h2><strong>ADVAY 16</strong> <br>Happy 50+ Events<br>Need an extra page</h2>
+
+				<a href="http://localhost/advay/event" class="register">Register Now</a>
+</div>
+</div>
+
+  <!-- events END -->
+<!-- pages END -->
+
+	<!-- Scripts -->
+	  <script src="assets/scripts/libraries/dat.gui.min.js"></script>
+    <script src="deploy/fss.min.js"></script>
+    <script src="assets/scripts/example.js"></script>
+	<script src="assets/scripts/js/libraries.min.js"></script>
+	<script src="deploy/jquery.parallax.js"></script>
+	<script>
+
+	// jQuery Selections
+	var $html = $('html'),
+			$container = $('#container'),
+			$prompt = $('#prompt'),
+			$toggle = $('#toggle'),
+			$about = $('#about'),
+			$scene = $('#scene');
+
+	// Hide browser menu.
+	(function() {
+		setTimeout(function(){window.scrollTo(0,0);},0);
+	})();
+
+	// Setup FastClick.
+	FastClick.attach(document.body);
+
+	// Add touch functionality.
+	if (Hammer.HAS_TOUCHEVENTS) {
+		$container.hammer({drag_lock_to_axis: true});
+		_.tap($html, 'a,button,[data-tap]');
+	}
+
+	// Add touch or mouse class to html element.
+	$html.addClass(Hammer.HAS_TOUCHEVENTS ? 'touch' : 'mouse');
+
+	// Resize handler.
+	(resize = function() {
+		$scene[0].style.width = window.innerWidth + 'px';
+		$scene[0].style.height = window.innerHeight + 'px';
+		if (!$prompt.hasClass('hide')) {
+			if (window.innerWidth < 600) {
+				$toggle.addClass('hide');
+			} else {
+				$toggle.removeClass('hide');
+			}
+		}
+		
+	})();
+
+	// Attach window listeners.
+	window.onresize = _.debounce(resize, 200);
+	window.onscroll = _.debounce(resize, 200);
+
+	function showDetails() {
+		$about.removeClass('hide');
+		$toggle.removeClass('explode');
+	}
+
+	function hideDetails() {
+		$about.addClass('hide');
+		$toggle.addClass('explode');
+	}
+
+	// Listen for toggle click event.
+	$toggle.on('click', function(event) {
+		$toggle.hasClass('explode') ? showDetails() : hideDetails();
+	});
+
+	// Pretty simple huh?
+	$scene.parallax();
+
+	// Check for orientation support.
+	setTimeout(function() {
+		if ($scene.data('mode') === 'cursor') {
+			$prompt.removeClass('hide');
+			if (window.innerWidth < 600) $toggle.addClass('hide');
+			$prompt.on('click', function(event) {
+				$prompt.addClass('hide');
+				if (window.innerWidth < 600) {
+					setTimeout(function() {
+						$toggle.removeClass('hide');
+					},1200);
+				}
+			});
+		}
+	},1000);
+
+
+	</script>
+</div>
+</body>
+
+</html>
